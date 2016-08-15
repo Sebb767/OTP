@@ -12,5 +12,8 @@
   "require": {
     "christian-riesen/base32": "1.*",
     "paragonie/random_compat": "1.*"
+  },
+  "autoload": {
+    "psr-4": { "OTPLock\\": [ "src/" ] }
   }
 }
