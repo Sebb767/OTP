@@ -1,0 +1,12 @@
+{
+  "name": "Sebb767/OTPLock",
+  "description": "A simple library to protect dev assets via otp code.",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sebastian Kaim",
+      "email": "sebb@sebb767.de"
+    }
+  ]
+}
