@@ -8,5 +8,9 @@
       "name": "Sebastian Kaim",
       "email": "sebb@sebb767.de"
     }
-  ]
+  ],
+  "require": {
+    "christian-riesen/base32": "1.*",
+    "paragonie/random_compat": "1.*"
+  }
 }
