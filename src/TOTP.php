@@ -28,13 +28,16 @@ class TOTP
     protected $secretBytes;
 
     /**
-     * TOTP constructor.
+     * TOTP constructor. If both parameters are given, the first one will be ignored.
      * @param string $secret The base32-encoded secret
+     * @param string $binarySecret The secret as binary string.
      */
-    public function __construct($secret)
+    public function __construct($secret, $binarySecret = null)
     {
-        $this->secret = $secret;
-        $this->secretBytes = Base32::decode($secret);
+        if($binarySecret !== null)
+            $this->setSecretBytes($binarySecret);
+        else
+            $this->setSecret($secret);
     }
 
     /**
@@ -43,14 +46,14 @@ class TOTP
      */
     public static function createWithRandomSecret()
     {
-        $secret = Base32::encode(random_bytes(self::$secretLength));
+        $secret = random_bytes(self::$secretLength);
 
-        return new self($secret);
+        return new self(null, $secret);
     }
 
     public function getCode()
     {
-        
+
     }
 
     /**
