@@ -6,7 +6,7 @@
  * Time: 12:11 AM
  */
 
-namespace OTPLock;
+namespace OTP;
 use Base32\Base32;
 
 

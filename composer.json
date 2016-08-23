@@ -1,6 +1,6 @@
 {
-  "name": "Sebb767/OTPLock",
-  "description": "A simple library to protect dev assets via otp code.",
+  "name": "Sebb767/OTP",
+  "description": "A simple library for OTP (one-time passwords) in PHP.",
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
@@ -14,6 +14,6 @@
     "paragonie/random_compat": "1.*"
   },
   "autoload": {
-    "psr-4": { "OTPLock\\": [ "src/" ] }
+    "psr-4": { "OTP\\": [ "src/" ] }
   }
 }
