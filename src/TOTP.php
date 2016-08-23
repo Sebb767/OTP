@@ -48,6 +48,29 @@ class TOTP
         return new self($secret);
     }
 
+    public function getCode()
+    {
+        
+    }
+
+    /**
+     * Get QR-Code URL for image, from google charts. Taken from PHPGangsta/GoogleAuthenticator .
+     *
+     * @param string $name
+     * @param string $title
+     * @return string
+     *
+     * @ref https://github.com/PHPGangsta/GoogleAuthenticator/blob/master/PHPGangsta/GoogleAuthenticator.php#L69
+     */
+    public function getQRCodeGoogleUrl($name, $title = null) {
+        $urlencoded = urlencode( 'otpauth://totp/'.$name.'?secret='.$this->secret );
+
+        if($title !== null)
+            $urlencoded .= urlencode('&issuer='.urlencode($title));
+
+        return 'https://chart.googleapis.com/chart?chs=200x200&chld=M|0&cht=qr&chl='.$urlencoded.'';
+    }
+
     //
     // --- getters + setters --
     //
