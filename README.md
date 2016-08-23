@@ -1,2 +1,2 @@
-# OTPLock
-A simple add-in library to lock pages for private access only.
+# Sebb767/OTP
+A simple library for the use of one-time passwords in PHP. TOTP is in development and HOTP is planned. The primary target is Google Authentificator, but it should work with Authy and itself as well as any other OTP app.
